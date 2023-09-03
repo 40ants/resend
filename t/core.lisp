@@ -1,0 +1,11 @@
+(uiop:define-package #:resend-tests/core
+  (:use #:cl)
+  (:import-from #:rove
+                #:deftest
+                #:ok
+                #:testing))
+(in-package #:resend-tests/core)
+
+
+(deftest test-example ()
+  (ok t "Replace this test with something useful."))
