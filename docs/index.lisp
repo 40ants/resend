@@ -80,9 +80,24 @@ You can install this library from Quicklisp, but you want to receive updates qui
 
 
 (defsection @usage (:title "Usage")
-  "
-TODO: Write a library description. Put some examples here.
-")
+  """
+This is a simple client to Resend.com. It allows to send transactional HTML emails.
+
+Here is a quick example:
+
+```
+;; First, we need to give it an API key to authenticate itself:
+(setf resend:*api-key*
+               "re_*************************")
+
+;; Then we can use this macro, to send letter. The macro RESEND:SEND uses Spinneret for rendering it's body
+;; to HTML and then sends it to given email.
+(let ((name "Bob"))
+  (resend:send ("onboarding@resend.dev" "bob@example.com" "Test email message")
+    (:h1 "Hello my friend!")
+    (:p (format nil "How are you doing, ~A?" name))))
+```
+""")
 
 
 (defautodoc @api (:system "resend"))
