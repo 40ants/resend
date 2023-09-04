@@ -41,6 +41,7 @@
 (defsection @index (:title "resend - A client library for sending emails via resend.com"
                     :ignore-words ("JSON"
                                    "HTTP"
+                                   "HTML"
                                    "TODO"
                                    "Unlicense"
                                    "REPL"
