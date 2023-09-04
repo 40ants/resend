@@ -67,7 +67,7 @@ Here is a quick example:
 
 <a id="x-28-23A-28-286-29-20BASE-CHAR-20-2E-20-22RESEND-22-29-20PACKAGE-29"></a>
 
-#### [package](f86a) `resend`
+#### [package](14da) `resend`
 
 <a id="x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FMacros-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
@@ -75,7 +75,7 @@ Here is a quick example:
 
 <a id="x-28RESEND-3ASEND-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29"></a>
 
-##### [macro](07dd) `resend:send` (from email subject) &body body
+##### [macro](48b9) `resend:send` (from email subject) &body body
 
 Sends `HTML` letter to an email.
 
@@ -89,13 +89,13 @@ lisp constructions such as loops and conditional expressions.
 
 <a id="x-28RESEND-3A-2AAPI-KEY-2A-20-28VARIABLE-29-29"></a>
 
-##### [variable](ea24) `resend:*api-key*` "re_B6VQSsM3_J9wQh5Nreutk96yJ7TMgTPVF"
+##### [variable](78c6) `resend:*api-key*` "re_B6VQSsM3_J9wQh5Nreutk96yJ7TMgTPVF"
 
 This should be a string or a secret-values:secret-value.
 
 <a id="x-28RESEND-3A-2AUSER-AGENT-2A-20-28VARIABLE-29-29"></a>
 
-##### [variable](5bc3) `resend:*user-agent*` "CL Resend (https://40ants.com/resend/)"
+##### [variable](61a0) `resend:*user-agent*` "CL Resend (https://40ants.com/resend/)"
 
 A value to be used in User-Agent `HTTP` header.
 
@@ -103,10 +103,10 @@ A value to be used in User-Agent `HTTP` header.
 [7ea8]: https://40ants.com/resend/
 [2e82]: https://github.com/40ants/resend
 [f103]: https://github.com/40ants/resend/actions
-[f86a]: https://github.com/40ants/resend/blob/33dce5dd9756c8f3278557356383828c8262fc75/src/core.lisp#L1
-[ea24]: https://github.com/40ants/resend/blob/33dce5dd9756c8f3278557356383828c8262fc75/src/core.lisp#L20
-[5bc3]: https://github.com/40ants/resend/blob/33dce5dd9756c8f3278557356383828c8262fc75/src/core.lisp#L23
-[07dd]: https://github.com/40ants/resend/blob/33dce5dd9756c8f3278557356383828c8262fc75/src/core.lisp#L52
+[14da]: https://github.com/40ants/resend/blob/d3d90dc02bb2f2adb4c11d438dab0935848ff6d6/src/core.lisp#L1
+[78c6]: https://github.com/40ants/resend/blob/d3d90dc02bb2f2adb4c11d438dab0935848ff6d6/src/core.lisp#L20
+[61a0]: https://github.com/40ants/resend/blob/d3d90dc02bb2f2adb4c11d438dab0935848ff6d6/src/core.lisp#L23
+[48b9]: https://github.com/40ants/resend/blob/d3d90dc02bb2f2adb4c11d438dab0935848ff6d6/src/core.lisp#L52
 [57f5]: https://github.com/40ants/resend/issues
 [8347]: https://quickdocs.org/dexador
 [7f8b]: https://quickdocs.org/log4cl
