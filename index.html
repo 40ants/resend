@@ -1,0 +1,120 @@
+<html lang=en>
+ <head>
+  <meta charset=UTF-8><meta name=viewport
+      content="width=device-width, initial-scale=1">
+  <title>resend - A client library for sending emails via resend.com</title>
+  <link rel=alternate
+        href="https://40ants.com/resend/changelog.xml"
+        type="application/rss+xml">
+  <link rel=stylesheet type="text/css"
+        href=theme.css>
+  <script type="text/javascript" src=jquery.js></script>
+  <script type="text/javascript" src=toc.js></script>
+  <script type="text/javascript">$(document).ready(function() {$('a:has(img)').css('border-bottom', 'none')})</script>
+  <link rel=stylesheet type="text/css"
+      href=highlight.min.css>
+  <script type="text/javascript"
+          src=highlight.min.js></script>
+  <script type="text/javascript">hljs.highlightAll();</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL71WXK73K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FL71WXK73K');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(42462884, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/42462884" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+ </head>
+ <body>
+  <div class=page><a id=fork-me href="https://github.com/40ants/resend">Fork me on GitHub</a>
+   <div class=navbar>
+    <div class=navbar-inner>
+     <a class=brand href="/">
+      <img class=logo
+           src="https://40ants.com/img/logo.svg"></a>
+     <ul class=nav>
+      <li><a href="/posts/">Blog</a>
+      <li><a href="/ru/posts/">Blog (RU)</a>
+      <li><a href="/tips/">Lisp Tips</a>
+      <li><a href="/projects/">Our Projects</a>
+      <li><a href="/about/">About</a>
+     </ul>
+    </div>
+   </div>
+   <input type=checkbox id=sidebar-check>
+   <label for=sidebar-check>
+    <div id=sidebar-trigger>
+     <span></span><span></span><span></span>
+    </div></label><div class=sidebar><div class=header><form class=search method=GET action="search/">
+      <input type=text name=q>
+      <input type=submit value=Search><span id=search-progress></span>
+     </form>
+    </div><div class=content><div class=page-toc><ul><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-40INDEX-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-40INDEX-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">resend - A client library for sending emails via resend.com</a></p><ul><li><p><a href="#resend-asdf-system-details" data-document="" data-node="resend-asdf-system-details">RESEND ASDF System Details</a></p></li><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-3A-40INSTALLATION-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-3A-40INSTALLATION-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">Installation</a></p></li><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-3A-40USAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-3A-40USAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">Usage</a></p></li><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-3A-40API-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-3A-40API-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">API</a></p><ul><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-3A-40RESEND-3FPACKAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-3A-40RESEND-3FPACKAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">RESEND</a></p><ul><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FMacros-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FMacros-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">Macros</a></p></li><li><p><a href="#x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FVariables-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="" data-node="x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FVariables-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">Variables</a></p></li></ul></li></ul></li></ul></li><li><p><a href="changelog/#x-28RESEND-DOCS-2FCHANGELOG-3A-40CHANGELOG-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29" data-document="changelog/" data-node="x-28RESEND-DOCS-2FCHANGELOG-3A-40CHANGELOG-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29">ChangeLog</a></p></li></ul>
+     </div>
+    </div><div class=footer>
+     <a href="https://40ants.com/doc">[generated by 40ANTS-DOC]</a>
+    </div>
+   </div><div class=content role=main><h1>resend - A client library for sending emails via resend.com<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-40INDEX-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-40INDEX-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h1><h2 id="resend-asdf-system-details">RESEND ASDF System Details</h2><ul><li><p>Description: A client library for sending emails via resend.com</p></li><li><p>Licence: Unlicense</p></li><li><p>Author: Alexander Artemenko &lt;svetlyak.40wt@gmail.com&gt;</p></li><li><p>Homepage: <a href="https://40ants.com/resend/">https://40ants.com/resend/</a></p></li><li><p>Bug tracker: <a href="https://github.com/40ants/resend/issues">https://github.com/40ants/resend/issues</a></p></li><li><p>Source control: <a href="https://github.com/40ants/resend">GIT</a></p></li><li><p>Depends on: <a href="https://quickdocs.org/dexador">dexador</a>, <a href="https://quickdocs.org/log4cl">log4cl</a>, <a href="https://quickdocs.org/secret-values">secret-values</a>, <a href="https://quickdocs.org/serapeum">serapeum</a>, <a href="https://quickdocs.org/spinneret">spinneret</a>, <a href="https://quickdocs.org/yason">yason</a></p></li></ul><p><a href="https://github.com/40ants/resend/actions"><img src="https://github-actions.40ants.com/40ants/resend/matrix.svg?only=ci.run-tests"/></a></p><p><img src="http://quickdocs.org/badge/resend.svg"/></p><h2>Installation<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-3A-40INSTALLATION-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-3A-40INSTALLATION-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h2><p>You can install this library from Quicklisp, but you want to receive updates quickly, then install it from Ultralisp.org:</p><pre><code class="">(ql-dist:install-dist &quot;http://dist.ultralisp.org/&quot;
+                      :prompt nil)
+(ql:quickload :resend)</code></pre><h2>Usage<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-3A-40USAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-3A-40USAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h2><p>This is a simple client to Resend.com. It allows to send transactional <code>HTML</code> emails.</p><p>Here is a quick example:</p><pre><code class="">;; First, we need to give it an API key to authenticate itself:
+(setf resend:*api-key*
+               &quot;re_*************************&quot;)
+
+;; Then we can use this macro, to send letter. The macro RESEND:SEND uses Spinneret for rendering it's body
+;; to HTML and then sends it to given email.
+(let ((name &quot;Bob&quot;))
+  (resend:send (&quot;onboarding@resend.dev&quot; &quot;bob@example.com&quot; &quot;Test email message&quot;)
+    (:h1 &quot;Hello my friend!&quot;)
+    (:p (format nil &quot;How are you doing, ~A?&quot; name))))</code></pre><h2>API<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-3A-40API-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-3A-40API-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h2><h3>RESEND<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-3A-40RESEND-3FPACKAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-3A-40RESEND-3FPACKAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h3><div class=reference-bullet><div class=reference-bullet-header><a class=locative-type href="https://github.com/40ants/resend/blob/58a2e0ad18d5b0286f56b06089e5cc1cd6ab073d/src/core.lisp#L1">package</a><div class=reference-object><div class=object-name><a href=#x-28-23A-28-286-29-20BASE-CHAR-20-2E-20-22RESEND-22-29-20PACKAGE-29 id=x-28-23A-28-286-29-20BASE-CHAR-20-2E-20-22RESEND-22-29-20PACKAGE-29>resend</a></div></div><a class=bullet-link href=#x-28-23A-28-286-29-20BASE-CHAR-20-2E-20-22RESEND-22-29-20PACKAGE-29></a></div></div><h4>Macros<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FMacros-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FMacros-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h4><div class=reference-bullet><div class=reference-bullet-header><a class=locative-type href="https://github.com/40ants/resend/blob/58a2e0ad18d5b0286f56b06089e5cc1cd6ab073d/src/core.lisp#L52">macro</a><div class=reference-object><div class=object-name><a href=#x-28RESEND-3ASEND-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29 id=x-28RESEND-3ASEND-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29>resend:send</a></div><div class=object-args><span class=locative-args>(from email subject) &amp;body body</span></div></div><a class=bullet-link href=#x-28RESEND-3ASEND-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29></a></div><div class=bullet-content><p>Sends <code>HTML</code> letter to an email.</p><p>Body of this macro should contain a markup for spinneret library.
+Also, it can use &quot;htm&quot; macro, to wrap html markup in the inner
+lisp constructions such as loops and conditional expressions.</p></div></div><h4>Variables<a class=header-link
+     href=#x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FVariables-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29
+     title="Permalink to this headline"
+     id=x-28RESEND-DOCS-2FINDEX-3A-3A-7C-40RESEND-3FVariables-SECTION-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29></a></h4><div class=reference-bullet><div class=reference-bullet-header><a class=locative-type href="https://github.com/40ants/resend/blob/58a2e0ad18d5b0286f56b06089e5cc1cd6ab073d/src/core.lisp#L20">variable</a><div class=reference-object><div class=object-name><a href=#x-28RESEND-3A-2AAPI-KEY-2A-20-28VARIABLE-29-29 id=x-28RESEND-3A-2AAPI-KEY-2A-20-28VARIABLE-29-29>resend:*api-key*</a></div><div class=object-args><span class=locative-args>nil</span></div></div><a class=bullet-link href=#x-28RESEND-3A-2AAPI-KEY-2A-20-28VARIABLE-29-29></a></div><div class=bullet-content><p>This should be a string or a secret-values:secret-value.</p></div></div><div class=reference-bullet><div class=reference-bullet-header><a class=locative-type href="https://github.com/40ants/resend/blob/58a2e0ad18d5b0286f56b06089e5cc1cd6ab073d/src/core.lisp#L23">variable</a><div class=reference-object><div class=object-name><a href=#x-28RESEND-3A-2AUSER-AGENT-2A-20-28VARIABLE-29-29 id=x-28RESEND-3A-2AUSER-AGENT-2A-20-28VARIABLE-29-29>resend:*user-agent*</a></div><div class=object-args><span class=locative-args>&quot;CL Resend (https://40ants.com/resend/)&quot;</span></div></div><a class=bullet-link href=#x-28RESEND-3A-2AUSER-AGENT-2A-20-28VARIABLE-29-29></a></div><div class=bullet-content><p>A value to be used in User-Agent <code>HTTP</code> header.</p></div></div>
+   </div><div class=footer>
+    <hr class=separator>
+    <p class=fineprint>Created with passion by <em>40Ants</em><a class=lisp-logo
+     href="http://lisp-lang.org/">
+      <img
+           src="https://40ants.com/img/made-with-lisp.svg"></a>
+   </div>
+  </div>
+ </body>
+</html>
